@@ -31,7 +31,7 @@ class User(UserMixin, db.Model):
 
 @app.route('/')
 def home():
-    return render_template("index.html", logged_in=current_user.is_authenticated)
+    return render_template("index.html", logged_in=False)
 
 
 @app.route('/register', methods=["GET", "POST"])
